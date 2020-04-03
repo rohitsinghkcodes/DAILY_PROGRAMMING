@@ -8,6 +8,7 @@ All other characters are zero, because the corresponding values in the range do 
 using namespace std;
 void answer(int x,int y)
 {
+    
     int s=64*y;
     //cout<<"==>"<<s;
     int e=(64*y)+63;

@@ -3,6 +3,7 @@
 
 void main()
 {
+    int 
     int length = 0;
     char s[500];
     printf("Enter the string");
