@@ -5,7 +5,8 @@ using namespace std;
 
 void patternPrint(int *n)
 {
-    for(int i=0;i<*n/2;i++)
+    *n=(*n%2==0)?*n:*n+1;
+    for( int i=0;i<*n/2;i++)
     {
         for(int l=0;l<2;l++)
         {
