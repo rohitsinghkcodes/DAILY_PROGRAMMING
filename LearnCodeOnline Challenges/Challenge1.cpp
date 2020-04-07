@@ -1,4 +1,4 @@
-//Creation of multiplication table
+//Challenge 1: Creation of multiplication table
 
 #include<iostream>
 using namespace std;
