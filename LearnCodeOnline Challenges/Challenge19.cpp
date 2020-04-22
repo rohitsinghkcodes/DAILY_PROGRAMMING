@@ -3,7 +3,7 @@
 #include<iostream>
 int main()
 {
-    if(printf("%c",59))
+    if(printf("%c\n",59))
     {
 
     }
