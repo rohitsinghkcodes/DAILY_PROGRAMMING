@@ -16,41 +16,27 @@ int main()
         v.push_back(val);
     }
 
-    int count = 0;
-    auto max = v.begin(),min = v.end()-1;
-    for(auto i=v.begin();i<v.end();i++)
-    {
-        if(*i>*max)
-        {
-            *max = *i;
-        }
-        if(*i<*min)
-        {
-            *min = *i;
-        }
-    }
-    cout<<*max<<" "<<*min<<endl;
+    int max = *max_element(v.begin(),v.end());
+    int min = *min_element(v.begin(),v.end());
 
-    int m = *max;
-    sort(v.begin(),v.end());
-    ptrdiff_t indmax = find(v.begin(),v.end(),m)- v.begin();
-    ptrdiff_t indmin = (find(v.begin(),v.end(),*min)- v.begin());
-    cout<<indmax<<" pos"<<indmin<< endl;
-    // if(*v.begin()==*min)
-    // {
-    //     count++;
-    // }
-    // if(*v.end()-1==*max)
-    // {
-    //     count++;
-    // }
+    int count = 0;
+    
+    ptrdiff_t indmax = find(v.begin(),v.end(),max)- v.begin()+1;
+    ptrdiff_t indmin = (find(v.begin(),v.end(),min)- v.begin())+1;
+    
+    if(v.front()==min)
+    {
+        count++;
+    }
+    if(v.back()==max)
+    {
+        count++;
+    }
 
     // //Calculation
-    // int x = n - 4;
-    // int y = indmax - 1;
-    // cout<<"The ans is:"<<x<<" "<<y<<" "<<x+y<<endl;
-
-    // cout<<count<<endl;
+    int x = n - indmin;
+    int y = indmax - 1;
+    cout<<(x+y)-count<<endl;
 
     return 0;
 }
