@@ -10,20 +10,22 @@ using namespace std;
 
 int main()
 {
-    int sum=10;
-    int y = 0;
-    vector<int> v={4,1,4,3,-6,-7,2},v2;
+    int sum=10, y=0, index_from, index_to;
+    string found = "false";
+    vector<int> v={2,4,1,4,3,-2,-6,2},v2;
     for(auto i :v)
     {
         v2.push_back(y);
         y+=i;
         if(count(v2.begin(),v2.end(),y-sum))
         {
-            cout<<"true"<<endl;
+            index_from = (find(v2.begin(), v2.end(), y-sum) - find(v2.begin(),v2.end(),v2.front()));
+            index_to = (find(v.begin(), v.end(), i) - find(v.begin(),v.end(),v.front()));
+            found = "true";
             break;
         }
 
     }
-    cout<<"false";
+    cout<<found<<endl<<"Index value range is: "<<index_from<<" - "<<index_to;
     return 0;
 }
