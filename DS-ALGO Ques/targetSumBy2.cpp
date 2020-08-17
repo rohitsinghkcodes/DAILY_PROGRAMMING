@@ -4,7 +4,6 @@
 #include<cmath>
 using namespace std;
 
-
 int main()
 {
     //ONE APPROACH
@@ -43,7 +42,6 @@ int main()
         else
         {
             n.push_back(*itr);
-
         }
     }
     return 0;
