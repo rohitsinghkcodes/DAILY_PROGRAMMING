@@ -17,7 +17,7 @@ int main()
         }
         else if(s[i]=='.')
         {
-            cout<<"\n\n";
+            cout<<"\n";
             count++;
         }
         else
